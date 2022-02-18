@@ -15,7 +15,7 @@ games.get("/", async (_, response) => {
   response.status(200).json({ allGames });
 });
 
-games.arguments("/:id", async (request, response) => {
+games.get("/:id", async (request, response) => {
   console.log("Get request to /:id");
 
   const oneGame = await getVideoGame(request.params.id);

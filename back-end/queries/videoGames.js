@@ -60,7 +60,7 @@ const updateGame = async (id, game) => {
     const { name, description, price, rating, featured, image } = game;
     const update = await db.one(
       "UPDATE games SET name=$2, description=$3, price=$4, rating=$5, featured=$6, image=$7 WHERE id=$1 RETURNING *",
-      [[id, name, description, price, rating, featured, image]]
+      [id, name, description, price, rating, featured, image]
     );
 
     return update;

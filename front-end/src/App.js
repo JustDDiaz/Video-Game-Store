@@ -1,30 +1,26 @@
-import axios from "axios";
-import { useState, useEffect } from "react";
-const API = process.env.REACT_APP_API_URL;
+import { Routes, Route } from "react-router-dom";
+import Edit from "../Pages/Edit";
+import FourOFour from "../Pages/FourOFour";
+import Home from "../Pages/Home";
+import Index from "../Pages/Index";
+import Show from "../Pages/Show";
+import New from "../Pages/New";
+import NavBar from "../Components/NavBars";
 
-console.log(API);
-function App() {
-  const [days, setDays] = useState([]);
-  useEffect(() => {
-    axios
-      .get(`${API}/test`)
-      .then(
-        (response) => {
-          setDays(response.data);
-        },
-        (error) => console.log("get", error)
-      )
-      .catch((c) => console.warn("catch", c));
-  }, []);
+export default function App() {
   return (
-    <div>
-      <ul>
-        {days.map((day) => (
-          <li key={day.name}>{day.name}</li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <NavBar />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/games" element={<Index />} />
+          <Route path="/games/new" element={<New />} />
+          <Route path="/games/:id" element={<Show />} />
+          <Route path="/games/:id/edit" element={<Edit />} />
+          <Route path="*" element={<FourOFour />} />
+        </Routes>
+      </main>
+    </>
   );
 }
-
-export default App;

@@ -25,7 +25,15 @@ const addVideoGame = async (game) => {
     const { name, description, price, rating, featured, image } = game;
     const newGame = await db.one(
       "INSERT INTO games (name, description, price, rating, featured, image) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
-      [name, description, price, rating, featured, image]
+      [
+        name,
+        description,
+        price,
+        rating,
+        featured,
+        image ||
+          "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image",
+      ]
     );
 
     return newGame;

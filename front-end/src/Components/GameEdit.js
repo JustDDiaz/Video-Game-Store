@@ -32,7 +32,7 @@ export default function GameEdit() {
   };
 
   const handleCheckboxChange = () => {
-    setGame({ ...game, featured: !featured });
+    setGame({ ...game, featured: !game.featured });
   };
 
   return (

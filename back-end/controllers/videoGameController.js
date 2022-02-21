@@ -12,14 +12,21 @@ games.get("/", async (_, response) => {
   console.log("GET request to /");
 
   const allGames = await getAllVideoGames();
-  response.status(200).json(allGames);
+  allGames.length !== 0
+    ? response.status(200).json(allGames)
+    : response.status(404).json({ error: error });
 });
 
 games.get("/:id", async (request, response) => {
   console.log("GET request to /:id");
 
-  const oneGame = await getVideoGame(request.params.id);
-  response.status(200).json(oneGame);
+  const { id } = request.params;
+  const oneGame = await getVideoGame(id);
+  if (oneGame.id) {
+    response.status(200).json(oneGame);
+  } else {
+    response.status(404).json({ error: error });
+  }
 });
 
 games.post("/", async (request, response) => {
@@ -33,14 +40,18 @@ games.delete("/:id", async (request, response) => {
   console.log("DELETE request to /:id");
 
   const removeGame = await deleteGame(request.params.id);
-  response.status(200).json(removeGame);
+  removeGame.id
+    ? response.status(200).json(removeGame)
+    : response.status(404).json({ error: error });
 });
 
 games.put("/:id", async (request, response) => {
   console.log("UPDATE request to /:id");
 
   const update = await updateGame(request.params.id, request.body);
-  response.status(200).json(update);
+  update.id
+    ? response.status(200).json(update)
+    : response.status(404).json({ error: error });
 });
 
 module.exports = games;

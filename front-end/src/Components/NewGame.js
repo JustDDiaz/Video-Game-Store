@@ -27,7 +27,7 @@ export default function NewGame() {
   };
 
   const handleCheckboxChange = () => {
-    setGame({ ...game, featured: !featured });
+    setGame({ ...game, featured: !game.featured });
   };
 
   return (

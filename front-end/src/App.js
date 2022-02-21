@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import Edit from "../Pages/Edit";
-import FourOFour from "../Pages/FourOFour";
-import Home from "../Pages/Home";
-import Index from "../Pages/Index";
-import Show from "../Pages/Show";
-import New from "../Pages/New";
-import NavBar from "../Components/NavBars";
+import Edit from "./Pages/Edit";
+import FourOFour from "./Pages/FourOFour";
+import Home from "./Pages/Home";
+import Index from "./Pages/Index";
+import Show from "./Pages/Show";
+import New from "./Pages/New";
+import NavBar from "./Components/NavBar";
 
 export default function App() {
   return (

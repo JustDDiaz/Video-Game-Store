@@ -8,7 +8,8 @@ export default function Games() {
 
   useEffect(() => {
     axios
-      .get(`${URL}/games`.then((response) => setGames(response.data)))
+      .get(`${URL}/games`)
+      .then((response) => setGames(response.data))
       .catch((error) => console.warn(error));
   }, [URL]);
 

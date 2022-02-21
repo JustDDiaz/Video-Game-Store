@@ -17,7 +17,7 @@ export default function GameEdit() {
 
   useEffect(() => {
     axios.get(`${URL}/games/${id}`).then((response) => setGame(response.data));
-  }, [id]);
+  }, [URL, id]);
 
   const handleTextChange = (event) => {
     setGame({

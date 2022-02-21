@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 
 export default function GameEdit() {
+  const { id } = useParams;
   const navigate = useNavigate();
   const URL = process.env.REACT_APP_API_URL;
   const [game, setGame] = useState({

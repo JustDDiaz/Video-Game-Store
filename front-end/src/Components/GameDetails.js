@@ -30,7 +30,12 @@ export default function GameDetails() {
   return (
     <div>
       <div>
-        <img src={game.image} alt={`Game cover for ${game.name}`} />
+        <img
+          src={game.image}
+          alt={`Game cover for ${game.name}`}
+          width="150"
+          height="200"
+        />
         <h3>{game.name}</h3>
         <p>${game.price}</p>
         <p>{game.rating}/5</p>

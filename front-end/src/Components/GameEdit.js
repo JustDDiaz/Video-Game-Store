@@ -14,7 +14,7 @@ export default function GameEdit() {
     featured: false,
     image: "",
   });
-  console.log(id);
+
   useEffect(() => {
     axios.get(`${URL}/games/${id}`).then((response) => setGame(response.data));
   }, [URL, id]);

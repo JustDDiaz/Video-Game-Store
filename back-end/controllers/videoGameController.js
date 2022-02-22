@@ -14,7 +14,7 @@ games.get("/", async (_, response) => {
   const allGames = await getAllVideoGames();
   allGames.length !== 0
     ? response.status(200).json(allGames)
-    : response.status(404).json({ error: error });
+    : response.status(404).json({ error: "error" });
 });
 
 games.get("/:id", async (request, response) => {
@@ -25,7 +25,7 @@ games.get("/:id", async (request, response) => {
   if (oneGame.id) {
     response.status(200).json(oneGame);
   } else {
-    response.status(404).json({ error: error });
+    response.status(404).json({ error: "error" });
   }
 });
 
@@ -42,7 +42,7 @@ games.delete("/:id", async (request, response) => {
   const removeGame = await deleteGame(request.params.id);
   removeGame.id
     ? response.status(200).json(removeGame)
-    : response.status(404).json({ error: error });
+    : response.status(404).json({ error: "error" });
 });
 
 games.put("/:id", async (request, response) => {
@@ -51,7 +51,7 @@ games.put("/:id", async (request, response) => {
   const update = await updateGame(request.params.id, request.body);
   update.id
     ? response.status(200).json(update)
-    : response.status(404).json({ error: error });
+    : response.status(404).json({ error: "error" });
 });
 
 module.exports = games;

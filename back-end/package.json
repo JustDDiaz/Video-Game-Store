@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "db:seed": "psql -f db/seed.sql",
-    "db:init": "psql -f db/schema.sql"
+    "db:seed": "psql -U justindiaz -f db/seed.sql",
+    "db:init": "psql -U justindiaz -f db/schema.sql"
   },
   "author": "",
   "license": "ISC",

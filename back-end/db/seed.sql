@@ -1,10 +1,15 @@
-\c cta_dev;
+\c video_game_store;
 
-INSERT INTO test (name) VALUES
-('Monday'),
-('Tuesday'),
-('Wednesday'),
-('Thursday'),
-('Friday'),
-('Saturday'),
-('Sunday');
+INSERT INTO games (name, description, price, rating, featured, image) VALUES
+('Gears of War', 'Gears of War is a third-person shooter video game developed by Epic Games and published by Microsoft Studios. Gears of War follows Delta Squad"s efforts to help deploy a Lightmass bomb deep in the Locust tunnels to wipe out the Locust threat.', 5, 4.8, false, 'https://imgur.com/fYNB4BN'),
+('Gears of War 2', 'Gears of War 2 is a third-person shooter video game published by Microsoft Studios. Gears of War 2 takes place after the first game, where the Locust are attempting to sink Jacinto Plateau, and the COG forces have decided to launch a counter-offensive to stop them before they can complete their attempt.', 6, 4.6, false, 'https://imgur.com/mkfNReH'),
+('Gears of War 3', 'Gears of War 3 is the concluding part to the trilogy. Gears of War 3 takes place 18 months after the end of Gears of War 2. Marcus, Dom, and the last remnants of humanity must band together to survive against the Locust and Lambent, while trying to find Marcus"s father and end the war', 10, 5, true, 'https://imgur.com/0syb7p4'),
+('BioShock', 'BioShock is a first-person shooter with role-playing game customization and stealth elements, and is similar to System Shock 2. The player takes the role of Jack as he is guided through Rapture towards various objectives. The player collects multiple weapons and plasmids as they work their way through enemy forces.', 6, 4.6, false, 'https://imgur.com/cpWfSDB'),
+('BioShock 2', 'BioShock 2 is the second game of the BioShock series and the sequel to BioShock, and continues the grand storyline of the underwater metropolis, Rapture. Set eight years after the events of the first game, BioShock 2 follows Subject Delta, a prototype Big Daddy sent on a quest to reunite with the Little Sister he was previously bonded to, Eleanor, across a changed and even more dangerous Rapture.', 12, 4.3, false, 'https://imgur.com/xfrlKax'),
+('BioShock Infinite', 'BioShock Infinite is the third game in the BioShock series. BioShock Infinite is the third game in the series and takes place in the airborne city of Columbia in 1912, where the player assumes the role of Booker DeWitt, a disgraced ex-Pinkerton agent. Booker has been given the job of finding a mysterious and powerful woman imprisoned in Columbia since birth named Elizabeth in order to wipe his debts away, and the story follows the unlikely duo as they journey to escape the flying city while discovering its twisted secrets.', 8, 4.7, true, 'https://imgur.com/em0NPCo'),
+('Hollow Knight', 'Hollow Knight is a 2D Metroidvania action-adventure game developed and published by Team Cherry. Hollow Knight takes place in Hallownest, a fictional ancient kingdom. The player controls an insect-like, silent, nameless knight while exploring the underground world.', 15, 4.5, false, 'https://imgur.com/cNnxWzl'),
+('Deep Rock Galactic', 'Deep Rock Galactic is a 1-4 player cooperative first-person shooter video game in which players work together while exploring destructible procedurally generated cave systems. The game takes place underground on Hoxxes IV, a dangerous planet full of minerals, biomes, and bugs.', 30, 4, false, 'https://imgur.com/QhvwPdi'),
+('Evolve', 'Evolve is a free-to-play sci-fi themed 3D asymmetric PvP shooter. The game features 4v1 gameplay where one player assumes the role of a rampaging monster while the other four hunt him down.', 0, 3.6, true, 'https://imgur.com/3XYnmfD'),
+('Gigantic', 'Gigantic was a free-to-play strategic third-person shooter video game developed by the independent game studio Motiga and published by Perfect World Entertainment. The game focused on team-based action combat with heroes battling alongside a massive guardian. Players must protect their guardian along with their team and attempt to destroy the opposing team and their guardian.', 0, 4.3, true, 'https://imgur.com/86TNRk6'),
+('Left 4 Dead 2', 'Left 4 Dead 2 is a 2009 first-person shooter game developed and published by Valve. The sequel to Turtle Rock Studios"s Left 4 Dead (2008) and the second game in the Left 4 Dead series. Set during the aftermath of an apocalyptic pandemic, the game focuses on four new Survivors, fighting against hordes of zombies known as the Infected, who develop severe psychosis and act extremely aggressive.', 10, 4.5, true, 'https://imgur.com/ovmttKL'),
+('Apex Legends', 'Apex Legends is an online multiplayer battle royale game featuring squads of three players using pre-made characters with distinctive abilities, called "Legends", similar to those of hero shooters. Alternate modes have been introduced allowing for single and for two-player squads since the game"s release.', 0, 4.2, true, 'https://imgur.com/F2rbpfb');

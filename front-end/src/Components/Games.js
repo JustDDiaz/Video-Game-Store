@@ -14,12 +14,12 @@ export default function Games() {
   }, [URL]);
 
   return (
-    <main>
-      <div>
+    <div className="container">
+      <div className="rows">
         {games.map((game) => {
           return <Game key={game.id} game={game} />;
         })}
       </div>
-    </main>
+    </div>
   );
 }

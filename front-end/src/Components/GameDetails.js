@@ -36,7 +36,7 @@ export default function GameDetails() {
         <p>{game.rating}/5</p>
         <p>{game.description}</p>
       </div>
-      <Link to={`/games/${game.id}`}>
+      <Link to={`/games`}>
         <button>Back</button>
       </Link>
       <Link to={`/games/${game.id}/edit`}>

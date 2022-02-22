@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 
 export default function GameEdit() {
-  const { id } = useParams;
+  const { id } = useParams();
   const navigate = useNavigate();
   const URL = process.env.REACT_APP_API_URL;
   const [game, setGame] = useState({
@@ -14,7 +14,7 @@ export default function GameEdit() {
     featured: false,
     image: "",
   });
-
+  console.log(id);
   useEffect(() => {
     axios.get(`${URL}/games/${id}`).then((response) => setGame(response.data));
   }, [URL, id]);

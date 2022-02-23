@@ -15,7 +15,7 @@ export default function Games() {
 
   return (
     <div className="container">
-      <div className="rows">
+      <div className="row g-3">
         {games.map((game) => {
           return <Game key={game.id} game={game} />;
         })}

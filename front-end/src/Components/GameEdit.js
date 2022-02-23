@@ -44,6 +44,7 @@ export default function GameEdit() {
           type="text"
           value={game.name}
           onChange={handleTextChange}
+          required
         />
         <label htmlFor="description">Description:</label>
         <input
@@ -58,6 +59,7 @@ export default function GameEdit() {
           type="number"
           value={game.price}
           onChange={handleTextChange}
+          required
         />
         <label htmlFor="rating">Rating:</label>
         <input
@@ -65,6 +67,7 @@ export default function GameEdit() {
           type="number"
           value={game.rating}
           onChange={handleTextChange}
+          required
         />
         <label htmlFor="featured">featured</label>
         <input

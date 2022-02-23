@@ -23,7 +23,7 @@ export default function NewGame() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.get(`${URL}/games`, game).then(() => navigate("/games"));
+    axios.post(`${URL}/games`, game).then(() => navigate("/games"));
   };
 
   const handleCheckboxChange = () => {

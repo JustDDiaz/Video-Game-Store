@@ -28,7 +28,7 @@ export default function GameEdit() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.get(`${URL}/games`, game).then(() => navigate(`/games/${id}`));
+    axios.put(`${URL}/games/${id}`, game).then(() => navigate(`/games/${id}`));
   };
 
   const handleCheckboxChange = () => {

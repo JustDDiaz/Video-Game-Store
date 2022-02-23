@@ -14,7 +14,7 @@ export default function Games() {
   }, [URL]);
 
   return (
-    <div className="container">
+    <div className="container bg-grey">
       <div className="row g-3">
         {games.map((game) => {
           return <Game key={game.id} game={game} />;

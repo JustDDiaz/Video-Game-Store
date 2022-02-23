@@ -39,6 +39,7 @@ export default function NewGame() {
           type="text"
           placeholder="Name of game"
           onChange={handleTextChange}
+          required
         />
         <label htmlFor="description">Description:</label>
         <input
@@ -53,6 +54,7 @@ export default function NewGame() {
           type="number"
           placeholder="Price of game"
           onChange={handleTextChange}
+          required
         />
         <label htmlFor="rating">Rating:</label>
         <input
@@ -60,6 +62,7 @@ export default function NewGame() {
           type="number"
           placeholder="Rating between 0 and 5"
           onChange={handleTextChange}
+          required
         />
         <label htmlFor="featured">featured</label>
         <input

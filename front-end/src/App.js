@@ -6,6 +6,7 @@ import Index from "./Pages/Index";
 import Show from "./Pages/Show";
 import New from "./Pages/New";
 import NavBar from "./Components/NavBar";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function App() {
   return (

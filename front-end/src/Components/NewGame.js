@@ -31,58 +31,88 @@ export default function NewGame() {
   };
 
   return (
-    <div>
+    <div className="container">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name:</label>
-        <input
-          id="name"
-          type="text"
-          placeholder="Name of game"
-          onChange={handleTextChange}
-          required
-        />
+        <div className="row">
+          <div className="col col-12 col-md-6">
+            <div className="form-group">
+              <label htmlFor="name">Name:</label>
+              <input
+                id="name"
+                type="text"
+                placeholder="Name of game"
+                onChange={handleTextChange}
+                required
+                className="form-control"
+              />
+            </div>
+          </div>
+          <div className="col col-12 col-md-6">
+            <div className="form-group">
+              <label htmlFor="price">Price:</label>
+              <input
+                id="price"
+                type="number"
+                placeholder="Price of game"
+                onChange={handleTextChange}
+                required
+                className="form-control"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col col-12 col-md-6">
+            <div className="form-group">
+              <label htmlFor="rating">Rating:</label>
+              <select id="rating" required className="form-control">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+          </div>
+          <div className="col col-12 col-md-6">
+            <div className="form-group">
+              <label htmlFor="image">Image:</label>
+              <input
+                id="image"
+                type="text"
+                placeholder="http://"
+                onChange={handleTextChange}
+                className="form-control"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="form-check">
+          <label htmlFor="featured" className="form-check-label">
+            featured
+          </label>
+          <input
+            id="featured"
+            type="checkbox"
+            onChange={handleCheckboxChange}
+            checked={game.featured}
+            className="form-check-input"
+          />
+        </div>
         <label htmlFor="description">Description:</label>
-        <input
+        <textarea
           id="description"
           type="text"
           placeholder="Description of game"
           onChange={handleTextChange}
+          className="form-control"
         />
-        <label htmlFor="price">Price:</label>
-        <input
-          id="price"
-          type="number"
-          placeholder="Price of game"
-          onChange={handleTextChange}
-          required
-        />
-        <label htmlFor="rating">Rating:</label>
-        <input
-          id="rating"
-          type="number"
-          placeholder="Rating between 0 and 5"
-          onChange={handleTextChange}
-          required
-        />
-        <label htmlFor="featured">featured</label>
-        <input
-          id="featured"
-          type="checkbox"
-          onChange={handleCheckboxChange}
-          checked={game.featured}
-        />
-        <label htmlFor="image">Image:</label>
-        <input
-          id="image"
-          type="text"
-          placeholder="http://"
-          onChange={handleTextChange}
-        />
-        <input type="submit" />
+        <input type="submit" className="btn btn-outline-primary" />
+        <Link to={`/games`}>
+          <button className="btn btn-outline-dark">Back</button>
+        </Link>
       </form>
-      <Link to={`/games`}>
-        <button>Back</button>
-      </Link>
     </div>
   );
 }

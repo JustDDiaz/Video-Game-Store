@@ -28,26 +28,31 @@ export default function GameDetails() {
   };
 
   return (
-    <div>
-      <div>
-        <img
-          src={game.image}
-          alt={`Game cover for ${game.name}`}
-          width="150"
-          height="200"
-        />
-        <h3>{game.name}</h3>
-        <p>${game.price}</p>
-        <p>{game.rating}/5</p>
-        <p>{game.description}</p>
+    <div className="container">
+      <div className="row">
+        <div className="col">
+          <img
+            src={game.image}
+            alt={`Game cover for ${game.name}`}
+            width="400"
+          />
+        </div>
+        <div className="col">
+          <h3>{game.name}</h3>
+          <p>${game.price}</p>
+          <p>{game.rating}/5</p>
+          <p>{game.description}</p>
+          <Link to={`/games/${game.id}/edit`}>
+            <button className="btn btn-outline-success">Edit</button>
+          </Link>
+          <Link to={`/games`}>
+            <button className="btn btn-outline-dark">Back</button>
+          </Link>
+          <button onClick={handleDelete} className="btn btn-outline-danger">
+            Delete
+          </button>
+        </div>
       </div>
-      <Link to={`/games`}>
-        <button>Back</button>
-      </Link>
-      <Link to={`/games/${game.id}/edit`}>
-        <button>Edit</button>
-      </Link>
-      <button onClick={handleDelete}>Delete</button>
     </div>
   );
 }
